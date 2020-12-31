@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+/* Setup */
 *,
 *::before,
 *::after {
@@ -13,7 +14,7 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-width: 100vw;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 3rem;
@@ -23,19 +24,17 @@ body {
   overflow: hidden;
 }
 
-.visible {
-  visibility: visible;
-}
-
 h1 {
-  text-align:center;
+  width: fit-content;
+  margin: auto;
+  padding: 0 2rem;
   margin-top: 2rem;
   font-size: 6rem;
   text-shadow: 
     -1px 1px 2px #666,
-    0px 5px 2px #666,
-    0px 3px 4px #666,
-    1px 1px 2px #666;
+    0px 3px 2px #666,
+    0px 2px 4px #666,
+    1px 4px 2px #666;
 }
 
 button {
@@ -90,6 +89,12 @@ footer span {
   visibility: hidden;
 }
 
+/* classes called with JS & utility classes*/
+
+.visible {
+  visibility: visible !important;
+}
+
 .end-screen-win {
   background: rgba(7, 214, 7, 0.7);
   position: fixed;
@@ -122,13 +127,21 @@ footer span {
 }
 
 #end-screen p {
+  visibility: hidden;
+  position: absolute;
   animation: spin 8s linear infinite;
   color: whitesmoke;
-  position: absolute;
-  top: 40%;
-  left: 30%;
   font-size: 4rem;
+  top: 40%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  border: 5px black solid;
+  text-shadow: -1px -1px 4px black,
+  1px 1px 4px black;
+  padding: 1rem;
 }
+
+/* Animations and media queries */
 
 @keyframes spin {
   from {

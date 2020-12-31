@@ -19,11 +19,11 @@ function computerPlay() {
 
   return computerChoice;
 }
+// END FUNCTION
 
 let nRound = 0;
 let nWin = 0;
 let nLost = 0;
-
 
 // FUNCTION TO PLAY 1 ROUND AND KEEPS TRACK OF ALL ROUNDS
 function playRound(playerSelection, computerSelection) {
@@ -37,14 +37,11 @@ function playRound(playerSelection, computerSelection) {
     })
   }
 
-  
-
   if (playerSelection == 'rock' && computerSelection == 'rock') {
     results.textContent = 'Round is tie!';
     nRound += 1;
     document.getElementById('n-round').textContent = ` ${nRound}`;
     document.querySelector('button:nth-child(2)').classList.add('blue');
-
   }
 
   else if (playerSelection == 'rock' && computerSelection == 'paper') {
@@ -55,7 +52,6 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById('n-lost').textContent = ` ${nLost}`;
     document.querySelector('button:nth-child(3)').classList.add('green');
     document.querySelector('button:nth-child(2)').classList.add('red');
-
   }
 
   else if (playerSelection == 'rock' && computerSelection == 'scissors') {
@@ -66,7 +62,6 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById('n-win').textContent = ` ${nWin}`;
     document.querySelector('button:nth-child(2)').classList.add('green');
     document.querySelector('button:nth-child(4)').classList.add('red');
-
   };
 
   if (playerSelection == 'paper' && computerSelection == 'paper') {
@@ -74,7 +69,6 @@ function playRound(playerSelection, computerSelection) {
     nRound += 1;
     document.getElementById('n-round').textContent = ` ${nRound}`;
     document.querySelector('button:nth-child(3)').classList.add('blue');
-
   }
 
   else if (playerSelection == 'paper' && computerSelection == 'rock') {
@@ -85,7 +79,6 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById('n-win').textContent = ` ${nWin}`;
     document.querySelector('button:nth-child(3)').classList.add('green');
     document.querySelector('button:nth-child(2)').classList.add('red');
-
   }
 
   else if (playerSelection == 'paper' && computerSelection == 'scissors') {
@@ -96,7 +89,6 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById('n-lost').textContent = ` ${nLost}`;
     document.querySelector('button:nth-child(4)').classList.add('green');
     document.querySelector('button:nth-child(3)').classList.add('red');
-
   };
 
   if (playerSelection == 'scissors' && computerSelection == 'scissors') {
@@ -104,7 +96,6 @@ function playRound(playerSelection, computerSelection) {
     nRound += 1;
     document.getElementById('n-round').textContent = ` ${nRound}`;
     document.querySelector('button:nth-child(4)').classList.add('blue');
-
   }
 
   else if (playerSelection == 'scissors' && computerSelection == 'paper') {
@@ -115,7 +106,6 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById('n-win').textContent = ` ${nWin}`;
     document.querySelector('button:nth-child(4)').classList.add('green');
     document.querySelector('button:nth-child(3)').classList.add('red');
-
   }
 
   else if (playerSelection == 'scissors' && computerSelection == 'rock') {
@@ -130,7 +120,8 @@ function playRound(playerSelection, computerSelection) {
 
   if (nWin === 5) {
     document.querySelector('#end-screen').classList.add('end-screen-win');
-    document.querySelector('#end-screen p').innerText = 'PLAYER HAS WON!\r\nCongratulations human!';
+    document.querySelector('#end-screen p').classList.add('visible');
+    document.querySelector('#end-screen p').innerHTML = 'PLAYER HAS WON!<br>Congratulations human!';
     document.querySelector('#audio-win').play()
     for (let i = 0; i < 3; i++) {
       document.querySelectorAll('button').forEach((e) => {
@@ -142,31 +133,31 @@ function playRound(playerSelection, computerSelection) {
 
   else if (nLost === 5) {
     document.querySelector('#end-screen').classList.add('end-screen-lose');
-    document.querySelector('#end-screen p').innerText = 'COMPUTER HAS WON!\r\nSad day for humans..';
+    document.querySelector('#end-screen p').classList.add('visible');
+    document.querySelector('#end-screen p').innerHTML = 'COMPUTER HAS WON!<br>Sad day for humans..';
     document.querySelector('#audio-lose').play()
     for (let i = 0; i < 3; i++) {
       document.querySelectorAll('button').forEach((e) => {
         e.classList.remove('green', 'blue', 'red');
-    })
+      })
+    }
+    return;
   }
-  return;
-}
-
   playerSelection = 'You selected ' + playerSelection;
   computerSelection = '"He" selected ' + computerSelection;
-
   document.querySelector('.box-player').textContent = playerSelection;
   document.querySelector('.box-computer').textContent = computerSelection;
 }
+// END FUNCTION
 
 const selectionRock = document.querySelector('#selection-rock');
 const selectionPaper = document.querySelector('#selection-paper');
 const selectionScissors = document.querySelector('#selection-scissors');
 const results = document.querySelector('#results');
 
-selectionRock.addEventListener('click', () => {playRound('rock'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play()});
-selectionPaper.addEventListener('click', () => {playRound('paper'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play()});
-selectionScissors.addEventListener('click', () => {playRound('scissors'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play()});
+selectionRock.addEventListener('click', () => { playRound('rock'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play() });
+selectionPaper.addEventListener('click', () => { playRound('paper'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play() });
+selectionScissors.addEventListener('click', () => { playRound('scissors'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play() });
 
 
 
