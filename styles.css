@@ -32,7 +32,9 @@ h1 {
   margin-top: 2rem;
   font-size: 6rem;
   text-shadow: 
-    -1px 1px 2px #666, 
+    -1px 1px 2px #666,
+    0px 5px 2px #666;
+    0px 3px 4px #666; 
     1px 1px 2px #666;
 }
 
@@ -40,9 +42,13 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 10rem 2rem 0 2rem;
+  margin: 8rem 2rem 0 2rem;
   background: black;
   color: whitesmoke;
+}
+
+button:hover {
+  opacity: 0.7;
 }
 
 i {
@@ -153,5 +159,14 @@ footer span {
 
   body {
     font-size: 2rem;
+  }
+  #choices-box {
+    margin-top: 2.5rem;
+  }
+
+  #end-screen p {
+    top: 40%;
+    left: 20%;
+    font-size: 3rem;
   }
 }
