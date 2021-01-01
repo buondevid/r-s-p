@@ -29,7 +29,7 @@ Tried to create a _cool_, _basic_ and _modern_ style to focus more on the logic 
 * Improved **HTML** and **CSS** fundamentals.
 * Improved responsivity programming with @media queries - Approach mobile-first.
 
-### What could be improved
+## What could be improved
 
 * Write tidier code and better JS, like creating functions to avoid repetitions and excessive nesting.
 
