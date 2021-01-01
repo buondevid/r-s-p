@@ -19,14 +19,14 @@ Tried to create a _cool_, _basic_ and _modern_ style to focus more on the logic 
 ## What I learned
 
 * Improved **Javascript** fundamentals: 
-  - Learned how to adapt previous pure JS code to a rendered website.
+  - Learned how to adapt previous pure JS code to a rendered website (you can see pure JS app in [this](/original-program.js) file)
   - Better grasp of NodeList, forEach() and looping in general inside querySelector.
   - Trying to put less CSS as possibile inside JS, using it mostly to add/remove classes.
   - Improved DOM manipulation.
   - Experimented with new functions found on purpose for the project like  *.play()*  or  *location.reload()*
 * Improved **VS Code usage** by downloading extensions to debug and color nesting.
 * Improved **clean code** writing.
-* Improved **HTML** and **CSS** fundamentals.
+* Improved **HTML** and **CSS** fundamentals (wide use of _utility classes_)
 * Improved responsivity programming with @media queries - Approach mobile-first.
 
 ## What could be improved
