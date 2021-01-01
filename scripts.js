@@ -120,7 +120,7 @@ function playRound(playerSelection, computerSelection) {
 
   if (nWin === 5) {
     document.querySelector('#end-screen').classList.add('end-screen-win');
-    document.querySelector('#end-screen p').classList.add('visible');
+    document.querySelectorAll('#end-screen p, #new-game').forEach( (e) => e.classList.add('visible'));
     document.querySelector('#end-screen p').innerHTML = 'PLAYER HAS WON!<br>Congratulations human!';
     document.querySelector('#audio-win').play()
     for (let i = 0; i < 3; i++) {
@@ -133,12 +133,12 @@ function playRound(playerSelection, computerSelection) {
 
   else if (nLost === 5) {
     document.querySelector('#end-screen').classList.add('end-screen-lose');
-    document.querySelector('#end-screen p').classList.add('visible');
+    document.querySelectorAll('#end-screen p, #new-game').forEach( (e) => e.classList.add('visible'));
     document.querySelector('#end-screen p').innerHTML = 'COMPUTER HAS WON!<br>Sad day for humans..';
     document.querySelector('#audio-lose').play()
     for (let i = 0; i < 3; i++) {
       document.querySelectorAll('button').forEach((e) => {
-        e.classList.remove('green', 'blue', 'red');
+        e.classList.remove('blue', 'green', 'red');
       })
     }
     return;
@@ -158,6 +158,8 @@ const results = document.querySelector('#results');
 selectionRock.addEventListener('click', () => { playRound('rock'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play() });
 selectionPaper.addEventListener('click', () => { playRound('paper'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play() });
 selectionScissors.addEventListener('click', () => { playRound('scissors'); document.querySelector('#audio-button').currentTime = 0; document.querySelector('#audio-button').play() });
+const newGame = document.querySelector('#new-game').addEventListener('click', () => {location.reload()});
+
 
 
 
