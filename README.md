@@ -1,4 +1,12 @@
-# Rock Paper Scissors
+<h1 align='center'>Rock Paper Scissors</h1>
+
+<p align='center'>
+	<img src='preview-game.png' width='700px'>
+</p>
+
+<p align='center'>
+	<img src='preview-win.png' width='700px'>
+</p>
 
 This game was created using only HTML, CSS and Vanilla JS.
 
