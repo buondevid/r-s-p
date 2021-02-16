@@ -14,8 +14,7 @@ html {
 }
 
 body {
-  min-width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   line-height: 1.5;
   font-size: 3rem;
   background:black;
@@ -100,6 +99,10 @@ footer span {
   top: 0;
   width: 100vw;
   height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column-reverse;
+	align-items: center;
 }
 
 .end-screen-lose {
@@ -125,20 +128,18 @@ footer span {
   animation: bumping 4s infinite;
 }
 
-#end-screen p {
+ #end-screen p {
   visibility: hidden;
-  position: absolute;
   animation: spin 8s linear infinite;
   color: whitesmoke;
   font-size: 4rem;
-  top: 40%;
-  left: 31%;
-  transform: translate(-50%, -50%);
   border: 5px black solid;
-  text-shadow: -1px -1px 4px black,
-  1px 1px 4px black;
+  text-shadow: 
+		-1px -1px 4px black,
+  	1px 1px 4px black;
   padding: 1rem;
-}
+	margin-top: 15rem;
+} 
 
 #new-game {
   border: 5px black solid;
@@ -148,6 +149,7 @@ footer span {
   font: inherit;
   cursor: pointer;
   visibility: hidden;
+	margin-top: -10rem;
 }
 
 /* Animations and media queries */
