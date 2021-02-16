@@ -134,7 +134,7 @@ footer span {
   animation: bumping 4s infinite;
 }
 
- #end-screen p {
+#end-screen p {
   visibility: hidden;
   animation: spin 8s linear infinite;
   color: whitesmoke;
@@ -142,7 +142,7 @@ footer span {
   border: 5px black solid;
   text-shadow: 
 		-1px -1px 4px black,
-  	1px 1px 4px black;
+  1px 1px 4px black;
   padding: 1rem;
 	margin-top: 25rem;
 } 
