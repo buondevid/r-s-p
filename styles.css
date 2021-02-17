@@ -183,6 +183,10 @@ footer span {
 }
 
 @media (max-width:500px) {
+	html {
+		font-size: 50%;
+	}
+
   h1 {
     font-size: 4rem;
     margin-top: 0.5rem;
